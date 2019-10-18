@@ -9,8 +9,7 @@ import { CounterService } from '../counter.service';
 export class CounterComponent implements OnInit {
 
   title = "compteur 1"
-  @Input()
-  value;
+  @Input() position;
   constructor(public counterService: CounterService) { }
 
   ngOnInit() {
