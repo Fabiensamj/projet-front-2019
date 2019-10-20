@@ -10,8 +10,7 @@ export class AppComponent {
 
   constructor(private counterService:CounterService){}
 
-  title = 'counters';
-  initialvalue=[12,5,8];
+ 
   reset(){
     this.counterService.reset();
   }
