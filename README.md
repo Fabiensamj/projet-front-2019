@@ -1,3 +1,7 @@
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7a80fba1-9aff-40bc-ab90-e1e57bca9c11/deploy-status)](https://app.netlify.com/sites/agitated-jang-e5d434/deploys)
+
+
 # Counters
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
