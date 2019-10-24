@@ -1,7 +1,7 @@
 [build]
   command = "ng build --prod"
   functions = "functions"
-  publish = "dist/counters"
+  publish = "."
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app. 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
