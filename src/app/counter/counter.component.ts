@@ -23,5 +23,6 @@ export class CounterComponent implements OnInit {
   
   increment(){
     this.counterService.incremement(this.position);
+    this.counterService.updateCounterValue(this.position)
   }
 }

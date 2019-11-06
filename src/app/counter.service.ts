@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class CounterService {
   initialvalue=[12,5,8];
   constructor( private httpClient: HttpClient) { }
-
+  baseUrl = 'https://lp4asgadot.herokuapp.com/counters/'
   reset(){
     this.initialvalue =[0,0,0];
   }
@@ -20,6 +20,10 @@ export class CounterService {
   }
   
   getCounterValue(id: number): Observable<Counter> {
-    return this.httpClient.get<Counter>("https://lp4asgadot.herokuapp.com/counters/"+id+".json")
+    return this.httpClient.get<Counter>(this.baseUrl+id+".json")
+  }
+  updateCounterValue(id: number): Observable<void> {
+    return this.httpClient.put<void>(this.baseUrl+id+".json",Counter)
+    
   }
 }
