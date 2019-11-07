@@ -1,3 +1,18 @@
 .spaced {
-    margin-bottom: 1em;
+    margin: 1em;
+    background-color: aqua;
+   
 } 
+button {
+	padding:6px 6px 6px 6px;
+	font:bold 13px Arial;
+	background:#478bf9;
+	color:#fff;
+	border-radius:2px;
+	width:100px;
+    border:none;
+    
+}
+.bloc{
+   padding:2px; 
+}

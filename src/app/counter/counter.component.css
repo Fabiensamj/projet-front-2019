@@ -1,18 +1,51 @@
 h1{
-    color:blue;
+	color:blue;
+	text-align: center;
 }
 p{
-    color: green;
+	height     : 35px;
+	width      : 115px;
+	float      : left;
+	
+	/* Background de l'écran sur tout les navigateurs */
+	background : linear-gradient(#34546B, #436C89);
+	background : -webkit-gradient(linear, center top, center bottom, from(#34546B), to(#436C89));
+	background : -webkit-linear-gradient(#34546B, #436C89);
+	background : -moz-linear-gradient(#34546B, #436C89);
+	background : -o-linear-gradient(#34546B, #436C89);
+	background : -ms-linear-gradient(#34546B, #436C89);
+	background : linear-gradient(#34546B, #436C89);
+	
+	/* Bord arrondis seulement sur les angles à gauche pour tout les navigateurs */
+	-webkit-border-top-left-radius    : 3px;
+	-webkit-border-bottom-left-radius : 3px;
+	-moz-border-radius-topleft        : 3px;
+	-moz-border-radius-bottomleft	    : 3px;
+	border-top-left-radius	   	 	    : 3px;
+	border-bottom-left-radius		      : 3px;
+	
+	/* Effet 3D */
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+	
+	/* Typographie de l'écran */
+	font-size     : 15px;
+	line-height   : 40px;
+	color         : white;
+	text-shadow   : 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align    : right;
+	padding-right : 5px;
 }
 button {
-	border:none;
 	padding:6px 0 6px 0;
-	border-radius:50%;
-	background:#478bf9;
 	font:bold 13px Arial;
+	background:#478bf9;
 	color:#fff;
-	width:160px;
+	border-radius:2px;
+	width:100px;
+	border:none;
+	height     : 35px;
 }
+
 .example-card{
 	margin-bottom: 1em;
 }
