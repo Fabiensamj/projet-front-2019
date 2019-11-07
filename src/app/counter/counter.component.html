@@ -2,8 +2,7 @@
         <mat-card-header>
                 <mat-card-title>#{{position}} {{value.name}}</mat-card-title>        </mat-card-header>
         <mat-card-content>
-          <p>
-              {{value.value}}
-            </p>
+          <p>{{value.value}}</p>
+          <button (click)="increment()">+1</button>
           </mat-card-content>
           <mat-card-actions>

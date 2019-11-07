@@ -11,18 +11,19 @@ import { Counter } from '../counter';
 export class CounterComponent implements OnInit {
 
   title = "compteur 1"
-  @Input() position:number;
+  @Input() position: number;
   value: Counter;
   constructor(public counterService: CounterService) { }
 
   ngOnInit() {
     console.log("call counter")
     this.counterService.getCounterValue(this.position)
-          .subscribe(counter => this.value =  counter)
+      .subscribe(counter => this.value = counter)
   }
-  
-  increment(){
-    this.counterService.incremement(this.position);
-    this.counterService.updateCounterValue(this.position)
+
+  increment() {
+    this.counterService.increment().subscribe(counter => this.value = counter);
+    
+    console.log("this.position est "+this.position)
   }
 }
