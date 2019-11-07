@@ -25,7 +25,7 @@ export class CounterService {
 }
   
   getCounterValue(id: number): Observable<Counter> {
-    return this.httpClient.get<Counter>(this.baseUrl+"53.json")
+    return this.httpClient.get<Counter>(this.baseUrl+id+".json")
   }
   
 } 
