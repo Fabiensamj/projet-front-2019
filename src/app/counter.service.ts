@@ -18,10 +18,10 @@ export class CounterService {
     return this.initialvalue[position];
 
   }*/
-  increment(): Observable<Counter>{
+  increment(id:number): Observable<Counter>{
     
-    this.httpClient.patch(this.baseUrl+"53.json",{"value" : 1}).subscribe();
-    return this.httpClient.get<Counter>(this.baseUrl+"53.json");
+    this.httpClient.patch(this.baseUrl+id+".json",{"value" : 1}).subscribe();
+    return this.httpClient.get<Counter>(this.baseUrl+id+".json");
 }
   
   getCounterValue(id: number): Observable<Counter> {

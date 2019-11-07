@@ -16,14 +16,15 @@ export class CounterComponent implements OnInit {
   constructor(public counterService: CounterService) { }
 
   ngOnInit() {
-    console.log("call counter")
+    console.log("call counter "+this.value)
     this.counterService.getCounterValue(this.position)
       .subscribe(counter => this.value = counter)
   }
 
   increment() {
-    this.counterService.increment().subscribe(counter => this.value = counter);
-    
+    if(this.position == 1) this.counterService.increment(53).subscribe(counter => this.value = counter);
+    if(this.position == 2) this.counterService.increment(57).subscribe(counter => this.value = counter);
+    if(this.position == 3) this.counterService.increment(58).subscribe(counter => this.value = counter);
     console.log("this.position est "+this.position)
   }
 }
