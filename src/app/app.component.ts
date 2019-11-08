@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { CounterService } from './counter.service';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-
-  constructor(private counterService:CounterService){}
-
+export class AppComponent implements OnInit{
  
+  constructor(private counterService:CounterService, private auth: AuthService){}
+
+  ngOnInit() {
+    this.auth.localAuthSetup();
+    this.auth.handleAuthCallback();
+  }
   reset(){
     this.counterService.reset();
   }
