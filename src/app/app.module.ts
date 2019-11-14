@@ -12,10 +12,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ProfileComponent } from './profile/profile.component';
+import { CounterDetailComponent }  from './counter-detail/counter-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { ProfileComponent } from './profile/profile.component';
     CounterComponent,
     NavbarComponent,
     HomeComponent,
-    ProfileComponent  
+    ProfileComponent,
+    CounterDetailComponent,
+    
     
   ],
   imports: [
@@ -37,7 +42,8 @@ import { ProfileComponent } from './profile/profile.component';
     MatListModule,
     MatCardModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatMenuModule
     
   ],
   providers: [],
