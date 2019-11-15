@@ -18,7 +18,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ProfileComponent } from './profile/profile.component';
 import { CounterDetailComponent }  from './counter-detail/counter-detail.component';
+import { NgxActionCableModule, NgxActionCableConfiguration } from 'ngx-actioncable';
+import { ActionCableService } from 'angular2-actioncable';
 
+
+export function getNgxActionCableConfig(): NgxActionCableConfiguration {
+  let config = new NgxActionCableConfiguration( 'wss:https://lp4asgadot.herokuapp.com/counters');
+  return config;
+}
 
 @NgModule({
   declarations: [
@@ -43,10 +50,11 @@ import { CounterDetailComponent }  from './counter-detail/counter-detail.compone
     MatCardModule,
     HttpClientModule,
     AppRoutingModule,
-    MatMenuModule
+    MatMenuModule,
+    NgxActionCableModule.forConfig(getNgxActionCableConfig)
     
   ],
-  providers: [],
+  providers: [ActionCableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

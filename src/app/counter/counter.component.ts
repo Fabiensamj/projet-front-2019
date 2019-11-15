@@ -3,6 +3,7 @@ import { CounterService } from '../counter.service';
 import { Observable } from 'rxjs';
 import { Counter } from '../counter';
 import { ActivatedRoute } from '@angular/router';
+import { NgxActionCableBroadcaster, NgxActionCableService } from 'ngx-actioncable';
 
 @Component({
   selector: 'app-counter',
@@ -15,7 +16,8 @@ export class CounterComponent implements OnInit {
 
   constructor(
     public counterService: CounterService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    ) { }
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -39,4 +41,6 @@ export class CounterComponent implements OnInit {
         this.counter.value = counter.value;
       });
   }
+  
+  
 }
